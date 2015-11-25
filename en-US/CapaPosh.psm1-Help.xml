@@ -1,0 +1,1508 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<helpItems xmlns="http://msh" schema="maml">
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Get-CapaDefaultManagementPointRegistry</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>CapaDefaultManagementPointRegistry</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Get-CapaDefaultManagementPointRegistry</maml:name>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+		</command:parameters>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+<maml:name>System.String</maml:name>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+				<maml:uri/>
+			</command:returnValue>
+		</command:returnValues>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Get-CapaDefaultManagementPointRegistry</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Replace-CapaPackage</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Replace</command:verb>
+			<command:noun>CapaPackage</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Replace-CapaPackage</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>CMPFolderPath</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageVersion</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>NewPackagePath</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>CMPFolderPath</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageVersion</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>NewPackagePath</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Replace-CapaPackage -PackageName &#39;Value1&#39; -CMPFolderPath &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Rebuild-CapaPackage</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Rebuild</command:verb>
+			<command:noun>CapaPackage</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Rebuild-CapaPackage</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>CMPFolderPath</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageVersion</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>KitCompressFolder</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>CMPFolderPath</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageVersion</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>KitCompressFolder</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Rebuild-CapaPackage -PackageName &#39;Value1&#39; -CMPFolderPath &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Backup-CapaPackage</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Backup</command:verb>
+			<command:noun>CapaPackage</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Backup-CapaPackage</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>CMPFolderPath</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageVersion</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>CMPFolderPath</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageVersion</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Backup-CapaPackage -PackageName &#39;Value1&#39; -CMPFolderPath &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Get-CapaLatestPackageVersionNumber</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>CapaLatestPackageVersionNumber</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Get-CapaLatestPackageVersionNumber</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+<maml:name>System.String</maml:name>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+				<maml:uri/>
+			</command:returnValue>
+		</command:returnValues>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Get-CapaLatestPackageVersionNumber -PackageName &#39;Value1&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Set-CapaPackageFolder</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Set</command:verb>
+			<command:noun>CapaPackageFolder</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Set-CapaPackageFolder</maml:name>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageVersion</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>FolderStructure</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>ChangeLogText</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageVersion</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>FolderStructure</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>ChangeLogText</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Set-CapaPackageFolder -PackageName &#39;Value1&#39; -PackageVersion &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Get-CapaPackages</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>CapaPackages</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Get-CapaPackages</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>Name</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>Name</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Get-CapaPackages -PackageType &#39;Value1&#39; -Name &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Get-CapaPackagePath</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>CapaPackagePath</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Get-CapaPackagePath</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="Named">
+					<maml:name>PackageVersion</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="Named">
+					<maml:name>PackageType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>Append</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="false" variableLength="false">Switch</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="Named">
+				<maml:name>PackageVersion</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="Named">
+				<maml:name>PackageType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>Append</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="false" variableLength="false">Switch</command:parameterValue>
+				<dev:type>
+					<maml:name>Switch</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Get-CapaPackagePath -PackageName $value1 -PackageVersion $value2</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Add-CapaAddUnitToPackage</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Add</command:verb>
+			<command:noun>CapaAddUnitToPackage</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Add-CapaAddUnitToPackage</maml:name>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>UnitName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>UnitType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageVersion</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>UnitName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>UnitType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageVersion</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Add-CapaAddUnitToPackage -UnitName &#39;Value1&#39; -UnitType &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Set-CapaPackageSchedule</command:name>
+			<maml:description>
+				<maml:para>A brief description of the Set-CapaSchedule function.</maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Set</command:verb>
+			<command:noun>CapaPackageSchedule</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para>A detailed description of the Set-CapaSchedule function.</maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Set-CapaPackageSchedule</maml:name>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para>The name of the package</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageVersion</maml:name>
+					<maml:description>
+						<maml:para>Package version</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageType</maml:name>
+					<maml:description>
+						<maml:para>Type of package</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>ScheduleStart</maml:name>
+					<maml:description>
+						<maml:para>The Schedule start date in the format  &quot;yyyy-MM-dd HH:mm&quot; eg. &quot;2015-04-15 12:05&quot;
+
+yyyy - Year with century.
+MM - Numeric month with a leading zero.
+dd - Numeric day of the month with a leading zero.
+HH - 24 Hour clock with leading zero.
+mm - Minutes with leading zero.</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>ScheduleEnd</maml:name>
+					<maml:description>
+						<maml:para>The Schedule start date in the format  &quot;yyyy-MM-dd HH:mm&quot; eg. &quot;2015-04-15 12:05&quot;. If no end date is wanted leave the string empty. e.g. &quot;&quot;
+
+yyyy - Year with century.
+MM - Numeric month with a leading zero.
+dd - Numeric day of the month with a leading zero.
+HH - 24 Hour clock with leading zero.
+mm - Minutes with leading zero.</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>ScheduleIntervalBegin</maml:name>
+					<maml:description>
+						<maml:para>The Schedule Interval begin time in the format  HH:mm&quot; eg. &quot;06:00&quot;. If left empty it is set to 00:00
+
+HH - 24 Hour clock with leading zero.
+mm - Minutes with leading zero.</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>ScheduleIntervalEnd</maml:name>
+					<maml:description>
+						<maml:para>The Schedule Interval end time in the format  HH:mm&quot; eg. &quot;12:00&quot;. If left empty it is set to 00:00
+
+HH - 24 Hour clock with leading zero.
+mm - Minutes with leading zero.</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>ScheduleRecurrence</maml:name>
+					<maml:description>
+						<maml:para>The Schedule Recurrence for the schedule.
+
+Possible values:
+
+&quot;Once&quot;
+&quot;PeriodicalDaily&quot;, use the variable ScheduleRecurrencePattern detail this recurrence
+&quot;PeriodicalWeekly&quot;, use the variable ScheduleRecurrencePattern detail this recurrence
+&quot;Always&quot;</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+				<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>ScheduleRecurrencePattern</maml:name>
+					<maml:description>
+						<maml:para>Is used to further detail the Schedule Recurrence when set to PeriodicalDaily or PeriodicalWeekly
+
+Possible values:
+
+ScheduleRecurrence = &quot;PeriodicalDaily&quot;
+ScheduleRecurrencePattern  = &quot;RecurEveryWeekDay&quot; sets the recurrence pattern to run every weekday
+ScheduleRecurrencePattern  = &quot;&quot; Sets the recurrence pattern to recur every day including weekend days.
+ScheduleRecurrence = &quot;PeriodicalWeekly&quot;
+ScheduleRecurrencePattern   = &quot;1,3,5&quot; Will set the schedule pattern to run</maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para>The name of the package</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageVersion</maml:name>
+				<maml:description>
+					<maml:para>Package version</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageType</maml:name>
+				<maml:description>
+					<maml:para>Type of package</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>ScheduleStart</maml:name>
+				<maml:description>
+					<maml:para>The Schedule start date in the format  &quot;yyyy-MM-dd HH:mm&quot; eg. &quot;2015-04-15 12:05&quot;
+
+yyyy - Year with century.
+MM - Numeric month with a leading zero.
+dd - Numeric day of the month with a leading zero.
+HH - 24 Hour clock with leading zero.
+mm - Minutes with leading zero.</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>ScheduleEnd</maml:name>
+				<maml:description>
+					<maml:para>The Schedule start date in the format  &quot;yyyy-MM-dd HH:mm&quot; eg. &quot;2015-04-15 12:05&quot;. If no end date is wanted leave the string empty. e.g. &quot;&quot;
+
+yyyy - Year with century.
+MM - Numeric month with a leading zero.
+dd - Numeric day of the month with a leading zero.
+HH - 24 Hour clock with leading zero.
+mm - Minutes with leading zero.</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>ScheduleIntervalBegin</maml:name>
+				<maml:description>
+					<maml:para>The Schedule Interval begin time in the format  HH:mm&quot; eg. &quot;06:00&quot;. If left empty it is set to 00:00
+
+HH - 24 Hour clock with leading zero.
+mm - Minutes with leading zero.</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>ScheduleIntervalEnd</maml:name>
+				<maml:description>
+					<maml:para>The Schedule Interval end time in the format  HH:mm&quot; eg. &quot;12:00&quot;. If left empty it is set to 00:00
+
+HH - 24 Hour clock with leading zero.
+mm - Minutes with leading zero.</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>ScheduleRecurrence</maml:name>
+				<maml:description>
+					<maml:para>The Schedule Recurrence for the schedule.
+
+Possible values:
+
+&quot;Once&quot;
+&quot;PeriodicalDaily&quot;, use the variable ScheduleRecurrencePattern detail this recurrence
+&quot;PeriodicalWeekly&quot;, use the variable ScheduleRecurrencePattern detail this recurrence
+&quot;Always&quot;</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>ScheduleRecurrencePattern</maml:name>
+				<maml:description>
+					<maml:para>Is used to further detail the Schedule Recurrence when set to PeriodicalDaily or PeriodicalWeekly
+
+Possible values:
+
+ScheduleRecurrence = &quot;PeriodicalDaily&quot;
+ScheduleRecurrencePattern  = &quot;RecurEveryWeekDay&quot; sets the recurrence pattern to run every weekday
+ScheduleRecurrencePattern  = &quot;&quot; Sets the recurrence pattern to recur every day including weekend days.
+ScheduleRecurrence = &quot;PeriodicalWeekly&quot;
+ScheduleRecurrencePattern   = &quot;1,3,5&quot; Will set the schedule pattern to run</maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false"></command:parameterValue>
+				<dev:type>
+					<maml:name></maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<maml:alertSet>
+			<maml:title></maml:title>
+			<maml:alert>
+				<maml:para>Additional information about the function.</maml:para>
+			</maml:alert>
+		</maml:alertSet>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 0  --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Set-CapaSchedule -PackageName $value1 -PackageVersion $value2</dev:code>
+				<dev:remarks>
+					<maml:para></maml:para>
+
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Get-CapaUnitPackages</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Get</command:verb>
+			<command:noun>CapaUnitPackages</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Get-CapaUnitPackages</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>UnitName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>UnitType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>UnitName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>UnitType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Get-CapaUnitPackages -UnitName &#39;Value1&#39; -UnitType &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Set-UnitPackageStatus</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Set</command:verb>
+			<command:noun>UnitPackageStatus</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Set-UnitPackageStatus</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>UnitName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>UnitType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackageVersion</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>PackagetType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>Status</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>UnitName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>UnitType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackageVersion</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>PackagetType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>Status</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+<maml:name>System.Boolean</maml:name>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+				<maml:uri/>
+			</command:returnValue>
+		</command:returnValues>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Set-UnitPackageStatus -UnitName &#39;Value1&#39; -UnitType &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+	<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+		<command:details>
+			<command:name>Restart-CapaAgent</command:name>
+			<maml:description>
+				<maml:para></maml:para>
+
+			</maml:description>
+			<maml:copyright>
+				<maml:para></maml:para>
+			</maml:copyright>
+			<command:verb>Restart</command:verb>
+			<command:noun>CapaAgent</command:noun>
+			<dev:version/>
+		</command:details>
+		<maml:description>
+				<maml:para></maml:para>
+
+		</maml:description>
+		<command:syntax>
+			<command:syntaxItem>
+				<maml:name>Restart-CapaAgent</maml:name>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>UnitName</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				</command:parameter>
+				<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+					<maml:name>UnitType</maml:name>
+					<maml:description>
+						<maml:para></maml:para>
+					</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				</command:parameter>
+			</command:syntaxItem>
+		</command:syntax>
+		<command:parameters>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>UnitName</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+				<dev:type>
+					<maml:name>String</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+			<command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named">
+				<maml:name>UnitType</maml:name>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+					<command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+				<dev:type>
+					<maml:name>string</maml:name>
+					<maml:uri/>
+				</dev:type>
+				<dev:defaultValue></dev:defaultValue>
+			</command:parameter>
+		</command:parameters>
+		<command:returnValues>
+			<command:returnValue>
+				<dev:type>
+<maml:name>System.Boolean</maml:name>
+				</dev:type>
+				<maml:description>
+					<maml:para></maml:para>
+				</maml:description>
+				<maml:uri/>
+			</command:returnValue>
+		</command:returnValues>
+		<command:examples>
+			<command:example>
+				<maml:title>--------------------------  EXAMPLE 1 --------------------------</maml:title>
+				<maml:introduction>
+					<maml:para></maml:para>
+				</maml:introduction>
+				<dev:code>PS C:\&gt; Restart-CapaAgent -UnitName &#39;Value1&#39; -UnitType &#39;Value2&#39;</dev:code>
+				<dev:remarks>
+					<maml:para>Write example description here.</maml:para>
+				</dev:remarks>
+			</command:example>
+		</command:examples>
+	</command:command>
+</helpItems>
+

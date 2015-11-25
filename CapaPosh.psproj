@@ -1,0 +1,14 @@
+﻿<Project>
+	<Version>1.1</Version>
+	<FileID>da5e4404-95ba-4786-ae4f-da235cfdea6b</FileID>
+	<ProjectType>1</ProjectType>
+	<Files>
+		<File ReferenceName="" Build="0">CapaPosh.psd1</File>
+		<File ReferenceName="" Build="0">CapaPosh.psm1</File>
+		<File ReferenceName="" Build="2">en-US\CapaPosh.psm1-Help.xml</File>
+	</Files>
+	<OpenFiles>
+		<File>CapaPosh.psd1</File>
+		<File>CapaPosh.psm1</File>
+	</OpenFiles>
+</Project>
