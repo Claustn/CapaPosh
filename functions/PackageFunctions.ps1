@@ -122,3 +122,39 @@ function Get-CapaPackagePath
         Remove-Variable -Name CapaCom
     }
 }
+
+function Clone-CapaPackage
+{
+    [CmdletBinding()]
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [String]$PackageName,
+        [Parameter(Mandatory = $true)]
+        [String]$PackageVersion,
+        [Parameter(Mandatory = $true)]
+        [ValidateSet('1', '2')]
+        [string]$PackageType,
+        [Parameter(Mandatory = $true)]
+        [String]$NewPackageVersion
+    )
+	
+    Begin
+    {
+        $CapaCom = New-Object -ComObject CapaInstaller.SDK
+        If ($PackageVersion -notmatch '^v')
+        {$PackageVersion = "v$PackageVersion"}
+        If ($NewPackageVersion -notmatch '^v')
+        {$NewPackageVersion = "v$NewPackageVersion"}
+    }
+    Process
+    {
+		
+        $CapaCom.ClonePackage($PackageName, $PackageVersion, $PackageType, $NewPackageVersion)
+    }
+    End
+    {
+        $CapaCom = $null
+        Remove-Variable -Name CapaCom
+    }
+}

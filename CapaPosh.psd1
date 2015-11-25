@@ -33,7 +33,7 @@ CompanyName = 'Automate-IT '
 Copyright = '(c) 2015. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'PowerShell module to manage the CapaInstaller SDK from PowerShell'
+Description = 'PowerShell module to manage the CapaInstaller SDK from PowerShell '
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '2.0'
