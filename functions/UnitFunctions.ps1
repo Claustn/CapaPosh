@@ -1,3 +1,4 @@
+#requires -Version 3
 function Add-CapaAddUnitToPackage
 {
     [CmdletBinding()]
@@ -15,6 +16,10 @@ function Add-CapaAddUnitToPackage
     Begin
     {
         $CapaCom = New-Object -ComObject CapaInstaller.SDK
+        If ($PackageVersion -notmatch '^v')
+        {
+            $PackageVersion = "v$PackageVersion"
+        }
     }
     Process
     {
@@ -27,7 +32,6 @@ function Add-CapaAddUnitToPackage
         Remove-Variable -Name CapaCom
     }
 }
-
 
 function Set-CapaPackageSchedule
 {
@@ -137,6 +141,10 @@ function Set-CapaPackageSchedule
     Begin
     {
         $CapaCom = New-Object -ComObject CapaInstaller.SDK
+        If ($PackageVersion -notmatch '^v')
+        {
+            $PackageVersion = "v$PackageVersion"
+        }
     }
     Process
     {
@@ -149,7 +157,6 @@ function Set-CapaPackageSchedule
         Remove-Variable -Name CapaCom
     }
 }
-
 
 function Get-CapaUnitPackages
 {
@@ -238,6 +245,11 @@ function Set-UnitPackageStatus
     Begin
     {
         $CapaCom = New-Object -ComObject CapaInstaller.SDK
+
+        If ($PackageVersion -notmatch '^v')
+        {
+            $PackageVersion = "v$PackageVersion"
+        }
     }
     Process
     {

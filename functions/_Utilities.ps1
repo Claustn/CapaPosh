@@ -1,3 +1,4 @@
+#requires -Version 2
 function Get-CapaDefaultManagementPointRegistry
 {
     [CmdletBinding()]
@@ -27,8 +28,13 @@ function Replace-CapaPackage
         $NewPackagePath
     )
     
+     If ($PackageVersion -notmatch '^v')
+        {
+            $PackageVersion = "v$PackageVersion"
+        }
+    
     Get-ChildItem $NewPackagePath -Recurse | ForEach-Object -Process {
-        Set-ItemProperty -Path $($_.FullName) -Name IsReadOnly -Value $false 
+        Set-ItemProperty -Path $($_.FullName) -Name IsReadOnly -Value $false
     }   
     Copy-Item -Path "$NewPackagePath\*" -Destination "$CMPFolderPath\$PackageName\$PackageVersion\kit\" -Recurse -Force
 }
@@ -51,6 +57,11 @@ function Rebuild-CapaPackage
         [string]
         $KitCompressFolder
     )
+
+    If ($PackageVersion -notmatch '^v')
+    {
+        $PackageVersion = "v$PackageVersion"
+    }
     
     $psi = New-Object -TypeName System.Diagnostics.ProcessStartInfo
     $psi.CreateNoWindow = $true
@@ -121,4 +132,121 @@ function Get-CapaLatestPackageVersionNumber
             Sort-Object |
         Select-Object -Last 1).ToString()
     }
+}
+
+function Update-CapaPackageCisVersion
+{
+    [CmdletBinding()]
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [String]$PackageName,
+        [Parameter(Mandatory = $true)]
+        [String]$CMPFolderPath,
+        [Parameter(Mandatory = $true)]
+        [string]$PackageVersion
+    )
+
+    If ($PackageVersion -notmatch '^v')
+    {
+        $PackageVersion = "v$PackageVersion"
+    }
+    
+    Write-Verbose -Message "Scripts Folder Name: $CMPFolderPath\$PackageName\$PackageVersion\Scripts"
+    Write-Verbose -Message "Script Name: $CMPFolderPath\$PackageName\$PackageVersion\Scripts\$PackageName.cis"
+
+    $pattern = '(?<!'' Basic Template\s+)(?<Version1>(v|_|")(\d+\.)?(\d+\.)(\*|\d+))'
+    (Get-Content -Path "$CMPFolderPath\$PackageName\$PackageVersion\Scripts\$PackageName.cis") |
+    ForEach-Object -Process {
+        $_ -replace $pattern, $PackageVersion
+    } |
+    Set-Content -Path "$CMPFolderPath\$PackageName\$PackageVersion\Scripts\$PackageName.cis" -Force
+}
+
+function Increment-Version
+{
+    [CmdletBinding()]
+    param
+    (
+        [switch]$Major,
+        [switch]$Minor,
+        [switch]$Build,
+        [switch]$Revision,
+        [Parameter(Mandatory = $true)]
+        [ValidatePattern('(\d+\.)?(\d+\.)?(\*|\d+\.)?(\*|\d+)')]
+        [string]$VersionNumber
+    )
+    
+    $Ver = [version]$VersionNumber
+    
+    
+    if ($Major) 
+    {
+        $VersionString += "$($Ver.Major + 1)"
+    }
+    Else 
+    {
+        $VersionString += "$($Ver.Major)"
+    }
+    
+    if ($Minor) 
+    {
+        $VersionString += ".$($Ver.Minor + 1)"
+    }
+    Else 
+    {
+        $VersionString += ".$($Ver.Minor)"
+    }
+    
+    If ($Ver.Build -ne '-1') 
+    {
+        if ($Build) 
+        {
+            $VersionString += ".$($Ver.Build + 1)"
+        }
+        Else 
+        {
+            $VersionString += ".$($Ver.Build)"
+        }
+    }
+    
+    if ($Ver.Revision -ne '-1') 
+    {
+        if ($Revision) 
+        {
+            $VersionString += ".$($Ver.Revision + 1)"
+        }
+        Else 
+        {
+            $VersionString += ".$($Ver.Revision)"
+        }
+    }
+    $VersionString
+}
+
+
+function Clear-CapaPackage
+{
+    [CmdletBinding()]
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [String]
+        $PackageName,
+        [Parameter(Mandatory = $true)]
+        [String]
+        $CMPFolderPath,
+        [Parameter(Mandatory = $true)]
+        [string]
+        $PackageVersion
+    )
+	
+    If ($PackageVersion -notmatch '^v')
+    {
+        $PackageVersion = "v$PackageVersion"
+    }	
+
+	
+    Write-Verbose -Message "Clearing out Kit Folder: $CMPFolderPath\$PackageName\$PackageVersion\kit\"
+    Remove-Item -Path "$CMPFolderPath\$PackageName\$PackageVersion\kit\*" -Recurse -Force
 }

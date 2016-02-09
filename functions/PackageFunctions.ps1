@@ -1,3 +1,4 @@
+#requires -Version 3
 function Set-CapaPackageFolder
 {
     [CmdletBinding()]
@@ -8,12 +9,16 @@ function Set-CapaPackageFolder
         [ValidateSet('Computer', 'User')]
         [String]$PackageType,
         [String]$FolderStructure,
-        [String]$ChangeLogText = "Moved by Automated Build script"
+        [String]$ChangeLogText = 'Moved by Automated Build script'
     )
     
     Begin
     {
         $CapaCom = New-Object -ComObject CapaInstaller.SDK
+        If ($PackageVersion -notmatch '^v')
+        {
+            $PackageVersion = "v$PackageVersion"
+        }
     }
     Process
     {
@@ -102,6 +107,10 @@ function Get-CapaPackagePath
     Begin
     {
         $CapaCom = New-Object -ComObject CapaInstaller.SDK
+        If ($PackageVersion -notmatch '^v')
+        {
+            $PackageVersion = "v$PackageVersion"
+        }
     }
     Process
     {
@@ -138,18 +147,22 @@ function Clone-CapaPackage
         [Parameter(Mandatory = $true)]
         [String]$NewPackageVersion
     )
-	
+    
     Begin
     {
         $CapaCom = New-Object -ComObject CapaInstaller.SDK
-        If ($PackageVersion -notmatch '^v')
-        {$PackageVersion = "v$PackageVersion"}
         If ($NewPackageVersion -notmatch '^v')
-        {$NewPackageVersion = "v$NewPackageVersion"}
+        {
+            $NewPackageVersion = "v$NewPackageVersion"
+        }
+        If ($PackageVersion -notmatch '^v')
+        {
+            $PackageVersion = "v$PackageVersion"
+        }
     }
     Process
     {
-		
+        
         $CapaCom.ClonePackage($PackageName, $PackageVersion, $PackageType, $NewPackageVersion)
     }
     End
