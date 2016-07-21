@@ -1,36 +1,36 @@
 #requires -Version 3
 function Add-CapaAddUnitToPackage
 {
-    [CmdletBinding()]
-    param
-    (
-        [String]$UnitName,
-        [ValidateSet('Computer', 'User')]
-        [string]$UnitType,
-        [String]$PackageName,
-        [String]$PackageVersion,
-        [ValidateSet('1', '2')]
-        [String]$PackageType
-    )
-    
-    Begin
-    {
-        $CapaCom = New-Object -ComObject CapaInstaller.SDK
-        If ($PackageVersion -notmatch '^v')
-        {
-            $PackageVersion = "v$PackageVersion"
-        }
-    }
-    Process
-    {
-        
-        $CapaCom.AddUnitToPackage($UnitName,$UnitType,$PackageName,$PackageVersion,$PackageType)
-    }
-    End
-    {
-        $CapaCom = $null
-        Remove-Variable -Name CapaCom
-    }
+	[CmdletBinding()]
+	param
+	(
+		[String]$UnitName,
+		[ValidateSet('Computer', 'User')]
+		[string]$UnitType,
+		[String]$PackageName,
+		[String]$PackageVersion,
+		[ValidateSet('1', '2')]
+		[String]$PackageType
+	)
+	
+	Begin
+	{
+		$CapaCom = New-Object -ComObject CapaInstaller.SDK
+		If ($PackageVersion -notmatch '^v')
+		{
+			$PackageVersion = "v$PackageVersion"
+		}
+	}
+	Process
+	{
+		
+		$CapaCom.AddUnitToPackage($UnitName, $UnitType, $PackageName, $PackageVersion, $PackageType)
+	}
+	End
+	{
+		$CapaCom = $null
+		Remove-Variable -Name CapaCom
+	}
 }
 
 function Set-CapaPackageSchedule
@@ -108,186 +108,229 @@ function Set-CapaPackageSchedule
             .NOTES
             Additional information about the function.
     #>
-
-    [CmdletBinding()]
-    param
-    (
-        [Parameter(HelpMessage = 'The name of the package')]
-        $PackageName,
-        [Parameter(HelpMessage = 'Package version')]
-        $PackageVersion,
-        [Parameter(HelpMessage = 'Type of package')]
-        [ValidateSet('Computer', 'User')]
-        $PackageType,
-        [Parameter(HelpMessage = 'The Schedule start date in the format  "yyyy-MM-dd HH:mm" eg. "2015-04-15 12:05"')]
-        [ValidatePattern('[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]')]
-        $ScheduleStart = '',
-        [Parameter(HelpMessage = 'The Schedule start date in the format  "yyyy-MM-dd HH:mm" eg. "2015-04-15 12:05". If no end date is wanted leave the string empty. e.g. ""')]
-        [ValidatePattern('[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]')]
-        $ScheduleEnd = '',
-        [Parameter(HelpMessage = 'The Schedule Interval begin time in the format  HH:mm" eg. "06:00". If left empty it is set to 00:00')]
-        [ValidatePattern('([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]')]
-        $ScheduleIntervalBegin = '',
-        [Parameter(HelpMessage = 'The Schedule Interval end time in the format  HH:mm" eg. "12:00". If left empty it is set to 00:00')]
-        [ValidatePattern('([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]')]
-        $ScheduleIntervalEnd = '',
-        [Parameter(HelpMessage = 'The Schedule Recurrence for the schedule.')]
-        [ValidateSet('Once', 'PeriodicalDaily', 'PeriodicalWeekly', 'Always')]
-        $ScheduleRecurrence,
-        [Parameter(HelpMessage = 'Is used to further detail the Schedule Recurrence when set to PeriodicalDaily or PeriodicalWeekly')]
-        $ScheduleRecurrencePattern = ''
-    )
-    
-    Begin
-    {
-        $CapaCom = New-Object -ComObject CapaInstaller.SDK
-        If ($PackageVersion -notmatch '^v')
-        {
-            $PackageVersion = "v$PackageVersion"
-        }
-    }
-    Process
-    {
-        
-        $CapaCom.SetPackageSchedule($PackageName, $PackageVersion, $PackageType, $ScheduleStart, $ScheduleEnd , $ScheduleIntervalBegin, $ScheduleIntervalEnd, $ScheduleRecurrence, $ScheduleRecurrencePattern)
-    }
-    End
-    {
-        $CapaCom = $null
-        Remove-Variable -Name CapaCom
-    }
+	
+	[CmdletBinding()]
+	param
+	(
+		[Parameter(HelpMessage = 'The name of the package')]
+		$PackageName,
+		[Parameter(HelpMessage = 'Package version')]
+		$PackageVersion,
+		[Parameter(HelpMessage = 'Type of package')]
+		[ValidateSet('Computer', 'User')]
+		$PackageType,
+		[Parameter(HelpMessage = 'The Schedule start date in the format  "yyyy-MM-dd HH:mm" eg. "2015-04-15 12:05"')]
+		[ValidatePattern('[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]')]
+		$ScheduleStart = '',
+		[Parameter(HelpMessage = 'The Schedule start date in the format  "yyyy-MM-dd HH:mm" eg. "2015-04-15 12:05". If no end date is wanted leave the string empty. e.g. ""')]
+		[ValidatePattern('[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]')]
+		$ScheduleEnd = '',
+		[Parameter(HelpMessage = 'The Schedule Interval begin time in the format  HH:mm" eg. "06:00". If left empty it is set to 00:00')]
+		[ValidatePattern('([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]')]
+		$ScheduleIntervalBegin = '',
+		[Parameter(HelpMessage = 'The Schedule Interval end time in the format  HH:mm" eg. "12:00". If left empty it is set to 00:00')]
+		[ValidatePattern('([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]')]
+		$ScheduleIntervalEnd = '',
+		[Parameter(HelpMessage = 'The Schedule Recurrence for the schedule.')]
+		[ValidateSet('Once', 'PeriodicalDaily', 'PeriodicalWeekly', 'Always')]
+		$ScheduleRecurrence,
+		[Parameter(HelpMessage = 'Is used to further detail the Schedule Recurrence when set to PeriodicalDaily or PeriodicalWeekly')]
+		$ScheduleRecurrencePattern = ''
+	)
+	
+	Begin
+	{
+		$CapaCom = New-Object -ComObject CapaInstaller.SDK
+		If ($PackageVersion -notmatch '^v')
+		{
+			$PackageVersion = "v$PackageVersion"
+		}
+	}
+	Process
+	{
+		
+		$CapaCom.SetPackageSchedule($PackageName, $PackageVersion, $PackageType, $ScheduleStart, $ScheduleEnd, $ScheduleIntervalBegin, $ScheduleIntervalEnd, $ScheduleRecurrence, $ScheduleRecurrencePattern)
+	}
+	End
+	{
+		$CapaCom = $null
+		Remove-Variable -Name CapaCom
+	}
 }
 
 function Get-CapaUnitPackages
 {
-    [CmdletBinding()]
-    param
-    (
-        [Parameter(Mandatory = $true)]
-        [String]
-        $UnitName,
-        [Parameter(Mandatory = $true)]
-        [ValidateSet('Computer', 'User')]
-        [string]
-        $UnitType
-    )
-    
-    Begin
-    {
-        $CapaCom = New-Object -ComObject CapaInstaller.SDK
-        $CapaApps = @()
-    }
-    Process
-    {
-        $Software = $CapaCom.GetUnitPackages("$UnitName", "$UnitType")
-        $softwarelist = $Software -split "`r`n"
-        $softwarelist | ForEach-Object -Process {
-            $SplitLine = ($_).split('|')
-            
-            $CapaApps += [pscustomobject][ordered] @{
-                PackageName               = $SplitLine[0]
-                PackageVersion            = $SplitLine[1]
-                PackageType               = $SplitLine[2]
-                PackageDisplayName        = $SplitLine[3]
-                PackageIsMandatory        = $SplitLine[4]
-                PackageScheduleId         = $SplitLine[5]
-                PackageDescription        = $SplitLine[6]
-                PackageGUID               = $SplitLine[7]
-                PackageID                 = $SplitLine[8]
-                PackageIsInteractive      = $SplitLine[9]
-                PackageDependendPackageID = $SplitLine[10]
-                PackageIsInventoryPackage = $SplitLine[11]
-                PackageCollectMode        = $SplitLine[12]
-                PackagePriority           = $SplitLine[13]
-                PackageServerDeploy       = $SplitLine[14]
-            }
-        }
-        
-    }
-    End
-    {
-        Return $CapaApps
-        $CapaCom = $null
-        Remove-Variable -Name CapaCom
-    }
+	[CmdletBinding()]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[String]$UnitName,
+		[Parameter(Mandatory = $true)]
+		[ValidateSet('Computer', 'User')]
+		[string]$UnitType
+	)
+	
+	Begin
+	{
+		$CapaCom = New-Object -ComObject CapaInstaller.SDK
+		$CapaApps = @()
+	}
+	Process
+	{
+		$Software = $CapaCom.GetUnitPackages("$UnitName", "$UnitType")
+		$softwarelist = $Software -split "`r`n"
+		$softwarelist | ForEach-Object -Process {
+			$SplitLine = ($_).split('|')
+			
+			$CapaApps += [pscustomobject][ordered] @{
+				PackageName = $SplitLine[0]
+				PackageVersion = $SplitLine[1]
+				PackageType = $SplitLine[2]
+				PackageDisplayName = $SplitLine[3]
+				PackageIsMandatory = $SplitLine[4]
+				PackageScheduleId = $SplitLine[5]
+				PackageDescription = $SplitLine[6]
+				PackageGUID = $SplitLine[7]
+				PackageID = $SplitLine[8]
+				PackageIsInteractive = $SplitLine[9]
+				PackageDependendPackageID = $SplitLine[10]
+				PackageIsInventoryPackage = $SplitLine[11]
+				PackageCollectMode = $SplitLine[12]
+				PackagePriority = $SplitLine[13]
+				PackageServerDeploy = $SplitLine[14]
+			}
+		}
+		
+	}
+	End
+	{
+		Return $CapaApps
+		$CapaCom = $null
+		Remove-Variable -Name CapaCom
+	}
+}
+
+function Get-CapaUnit
+{
+	[CmdletBinding()]
+	param
+	(
+		[Parameter(Mandatory = $false)]
+		[ValidateSet('Computer', 'User')]
+		[string]$UnitType
+	)
+	
+	Begin
+	{
+		$CapaCom = New-Object -ComObject CapaInstaller.SDK
+		$CapaApps = @()
+	}
+	Process
+	{
+		$Software = $CapaCom.GetUnits("$UnitType")
+		$softwarelist = $Software -split "`r`n"
+		$softwarelist | ForEach-Object -Process {
+			$SplitLine = ($_).split('|')
+			
+			Try
+			{
+				$CapaApps += [pscustomobject][ordered] @{
+					UnitName = $SplitLine[0]
+					UnitCreated = [DateTime]::Parse($($SplitLine[1]).ToString())
+					UnitLastExecuted = [DateTime]::Parse($($SplitLine[2]).ToString())
+					UnitStatus = $SplitLine[3]
+					UnitDescription = $SplitLine[4]
+					UnitGUID = $SplitLine[5]
+					UnitID = $SplitLine[6]
+					UnitTypeName = $SplitLine[7]
+					UnitUUID = $SplitLine[8]
+					UnitIsMobileDevice = $SplitLine[9]
+					UnitLocation = $SplitLine[10]
+				}
+			}
+			Catch
+			{
+				Write-Warning -Message "An error occured for computer: $($SplitLine[0]) "
+			}
+		}
+		
+	}
+	End
+	{
+		Return $CapaApps
+		$CapaCom = $null
+		Remove-Variable -Name CapaCom
+	}
 }
 
 function Set-UnitPackageStatus
 {
-    [CmdletBinding()]
-    [OutputType([bool])]
-    param
-    (
-        [Parameter(Mandatory = $true)]
-        [String]
-        $UnitName,
-        [Parameter(Mandatory = $true)]
-        [ValidateSet('Computer', 'User')]
-        [string]
-        $UnitType,
-        [Parameter(Mandatory = $true)]
-        [string]
-        $PackageName,
-        [Parameter(Mandatory = $true)]
-        [string]
-        $PackageVersion,
-        [Parameter(Mandatory = $true)]
-        [ValidateSet('1', '2')]
-        [string]
-        $PackagetType,
-        [Parameter(Mandatory = $true)]
-        [ValidateSet('Installing', 'Waiting', 'Failed', 'Cancelled', 'Cancel', 'Installed', 'Uninstall', 'Post', 'Disabled', 'Not Compliant', 'Advertised')]
-        [string]
-        $Status
-    )
-    
-    
-    Begin
-    {
-        $CapaCom = New-Object -ComObject CapaInstaller.SDK
-
-        If ($PackageVersion -notmatch '^v')
-        {
-            $PackageVersion = "v$PackageVersion"
-        }
-    }
-    Process
-    {
-        $CapaCom.SetUnitPackageStatus("$UnitName", "$UnitType", "$PackageName", "$PackageVersion", "$PackagetType", "$Status")
-    }
-    End
-    {
-        $CapaCom = $null
-        Remove-Variable -Name CapaCom
-    }
+	[CmdletBinding()]
+	[OutputType([bool])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[String]$UnitName,
+		[Parameter(Mandatory = $true)]
+		[ValidateSet('Computer', 'User')]
+		[string]$UnitType,
+		[Parameter(Mandatory = $true)]
+		[string]$PackageName,
+		[Parameter(Mandatory = $true)]
+		[string]$PackageVersion,
+		[Parameter(Mandatory = $true)]
+		[ValidateSet('1', '2')]
+		[string]$PackagetType,
+		[Parameter(Mandatory = $true)]
+		[ValidateSet('Installing', 'Waiting', 'Failed', 'Cancelled', 'Cancel', 'Installed', 'Uninstall', 'Post', 'Disabled', 'Not Compliant', 'Advertised')]
+		[string]$Status
+	)
+	
+	
+	Begin
+	{
+		$CapaCom = New-Object -ComObject CapaInstaller.SDK
+		
+		If ($PackageVersion -notmatch '^v')
+		{
+			$PackageVersion = "v$PackageVersion"
+		}
+	}
+	Process
+	{
+		$CapaCom.SetUnitPackageStatus("$UnitName", "$UnitType", "$PackageName", "$PackageVersion", "$PackagetType", "$Status")
+	}
+	End
+	{
+		$CapaCom = $null
+		Remove-Variable -Name CapaCom
+	}
 }
 
 function Restart-CapaAgent
 {
-    [CmdletBinding()]
-    [OutputType([bool])]
-    param
-    (
-        [Parameter(Mandatory = $true)]
-        [String]
-        $UnitName,
-        [Parameter(Mandatory = $true)]
-        [ValidateSet('1', '2')]
-        [string]
-        $UnitType
-    )
-    
-    Begin
-    {
-        $CapaCom = New-Object -ComObject CapaInstaller.SDK
-    }
-    Process
-    {
-        $CapaCom.RestartAgent("$UnitName", "$UnitType")
-    }
-    End
-    {
-        $CapaCom = $null
-        Remove-Variable -Name CapaCom
-    }
+	[CmdletBinding()]
+	[OutputType([bool])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[String]$UnitName,
+		[Parameter(Mandatory = $true)]
+		[ValidateSet('1', '2')]
+		[string]$UnitType
+	)
+	
+	Begin
+	{
+		$CapaCom = New-Object -ComObject CapaInstaller.SDK
+	}
+	Process
+	{
+		$CapaCom.RestartAgent("$UnitName", "$UnitType")
+	}
+	End
+	{
+		$CapaCom = $null
+		Remove-Variable -Name CapaCom
+	}
 }
