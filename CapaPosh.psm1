@@ -18,11 +18,11 @@ foreach ($function in $functions)
 }
 
 # Load internal functions
-$internals = Get-ChildItem -Path "$PSScriptRoot\Internal" -Recurse -Include *.ps1
-foreach ($internal in $internals)
-{
-	. $internal.FullName
-}
+#$internals = Get-ChildItem -Path "$PSScriptRoot\Internal" -Recurse -Include *.ps1
+#foreach ($internal in $internals)
+#{
+#	. $internal.FullName
+#}
 
 #Export-ModuleMember Get-CapaDefaultManagementPointRegistry,
 #					Replace-CapaPackage,
