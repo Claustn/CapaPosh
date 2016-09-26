@@ -69,8 +69,8 @@ function Get-CapaGroup
   [OutputType([pscustomobject])]
   param
   (
-    [Parameter(Mandatory=$true)][ValidateSet('Calendar', 'Department', 'Reinstall', 'Security', 'Static', 'Dynamic_SQL', 'Dynamic_ADSI')]
-    [String]$GroupType    
+    [Parameter(Mandatory=$False)][ValidateSet('Calendar', 'Department', 'Reinstall', 'Security', 'Static', 'Dynamic_SQL', 'Dynamic_ADSI')]
+    [String]$GroupType = ''  
   )
 	
 	
@@ -107,11 +107,17 @@ function Get-CapaGroup
   }
   End
   {
-    Return $CapaGroups
+    
     $CapaCom = $null
     Remove-Variable -Name CapaCom
+    Return $CapaGroups
   }
 }
 
 
-if ($(Get-CapaGroup -GroupType Static | Select -ExpandProperty GroupName) -contains 'Skade2') {"hurra"}
+if ($(Get-CapaGroup -GroupType Static | Select -ExpandProperty GroupName) -contains 'Skade') {"hurra"}
+
+
+Get-CapaGroup  | where GroupName -Match 'early'
+
+Invoke-Sqlcmd -Database CapaDB -ServerInstance apsql2008ny -Query 'select * from UNITGRP'
