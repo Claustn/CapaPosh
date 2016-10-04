@@ -7,7 +7,7 @@ The following functions are currently available:
 
 
 > *Add-CapaAddUnitToPackage
-> Add-CapaUnitToGroup
+>  Add-CapaUnitToGroup
 > Backup-CapaPackage
 > Clear-CapaPackage
 > Clone-CapaPackage
