@@ -263,7 +263,7 @@ function Get-CapaUnit
 	}
 }
 
-function Set-UnitPackageStatus
+function Set-CapaUnitPackageStatus
 {
 	[CmdletBinding()]
 	[OutputType([bool])]
@@ -327,6 +327,70 @@ function Restart-CapaAgent
 	Process
 	{
 		$CapaCom.RestartAgent("$UnitName", "$UnitType")
+	}
+	End
+	{
+		$CapaCom = $null
+		Remove-Variable -Name CapaCom
+	}
+}
+
+function Add-CapaUnitToGroup
+{
+	[CmdletBinding()]
+	[OutputType([boolean])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[String]$UnitName,
+		[ValidateSet('Computer', 'User', 'Printer')]
+		[String]$UnitType,
+		[Parameter(Mandatory = $true)]
+		[String]$GroupName,
+		[Parameter(Mandatory = $true)]
+		[ValidateSet('Calendar', 'Department', 'Reinstall', 'Security', 'Static', 'Dynamic_SQL', 'Dynamic_ADSI')]
+		[String]$GroupType
+	)
+	
+		Begin
+	{
+		$CapaCom = New-Object -ComObject CapaInstaller.SDK
+	}
+	Process
+	{
+		$CapaCom.AddUnitToGroup("$UnitName", "$UnitType", "$GroupName", "$GroupType")
+	}
+	End
+	{
+		$CapaCom = $null
+		Remove-Variable -Name CapaCom
+	}
+}
+
+function Remove-CapaUnitFromGroup
+{
+	[CmdletBinding()]
+	[OutputType([boolean])]
+	param
+	(
+		[Parameter(Mandatory = $true)]
+		[String]$UnitName,
+		[ValidateSet('Computer', 'User', 'Printer')]
+		[String]$UnitType,
+		[Parameter(Mandatory = $true)]
+		[String]$GroupName,
+		[Parameter(Mandatory = $true)]
+		[ValidateSet('Calendar', 'Department', 'Reinstall', 'Security', 'Static')]
+		[String]$GroupType
+	)
+	
+	Begin
+	{
+		$CapaCom = New-Object -ComObject CapaInstaller.SDK
+	}
+	Process
+	{
+		$CapaCom.AddUnitToGroup("$UnitName", "$UnitType", "$GroupName", "$GroupType")
 	}
 	End
 	{
